@@ -9,14 +9,28 @@ import java.util.Scanner;
 public class Runner {
 
     private String searchChoice = "";
-    private FileSearch fileSearch = new FileSearch();
+    private final FileSearch fileSearch = new FileSearch();
+    private long startTime;
+    private long endTime;
+
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime() {
+        this.startTime = System.currentTimeMillis();
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime() {
+        this.endTime = System.currentTimeMillis();
+    }
 
     public FileSearch getFileSearch() {
         return fileSearch;
-    }
-
-    public void setFileSearch(FileSearch fileSearch) {
-        this.fileSearch = fileSearch;
     }
 
     public String getSearchChoice() {
@@ -24,6 +38,7 @@ public class Runner {
     }
 
     public void setSearchChoice(String searchChoice, String location) {
+        setStartTime();
         if(searchChoice.equalsIgnoreCase("f") || searchChoice.equalsIgnoreCase("k")) {
             this.searchChoice = searchChoice.toLowerCase();
             fileOrDirecLogic(location);
@@ -54,6 +69,8 @@ public class Runner {
 
 
 
+
+
     public static void main(String[] args) {
 
         System.out.println("Your keyword to search on");
@@ -61,7 +78,12 @@ public class Runner {
         Scanner scan = new Scanner(System.in);
         runner.setFileName(scan.next());
         System.out.print("Searching for file name or keyword? (F or K): ");
+
+
         runner.setSearchChoice(scan.next(), "/Users/rhy704/");
+        runner.setEndTime();
+
+        System.out.println("Time take: " + (runner.getEndTime() - runner.getStartTime()));
 
     }
 

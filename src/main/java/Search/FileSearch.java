@@ -1,6 +1,7 @@
 package Search;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by rhy704 on 9/22/16.
@@ -10,9 +11,6 @@ public class FileSearch {
     private File file;
     private String name;
     private boolean found = false;
-
-    public long startTime;
-    public long endTime;
 
     public String getName() { return name; }
 
