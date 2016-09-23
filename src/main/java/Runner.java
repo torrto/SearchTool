@@ -10,8 +10,7 @@ public class Runner {
 
     private Runner(){}
 
-    private static String searchChoice;
-    private static String fileName = null;
+    private static String searchChoice = "";
 
     public static String getSearchChoice() {
         return searchChoice;
@@ -26,12 +25,8 @@ public class Runner {
         }
     }
 
-    public static String getFileName() {
-        return fileName;
-    }
-
     public static void setFileName(String fileName) {
-        Runner.fileName = fileName;
+        FileSearch.setName(fileName);
     }
 
     public static void fileOrDirecLogic(String location) {
@@ -39,9 +34,8 @@ public class Runner {
             // do something
         }
         else if(searchChoice.equalsIgnoreCase("f")) {
-            FileSearch fileSearch = new FileSearch();
-            fileSearch.setFile(new File(location));
-            fileSearch.searcher(fileSearch.getFile());
+            FileSearch.setFile(new File(location));
+            FileSearch.searcher(FileSearch.getFile());
 
         }
         else {
@@ -53,13 +47,13 @@ public class Runner {
 
 
     public static void main(String[] args) {
-
+        System.out.println("Your keyword to search on");
+        Scanner scanner = new Scanner(System.in);
+        Runner.setFileName(scanner.next());
         System.out.print("Searching for file name or keyword? (F or K): ");
         Scanner scan = new Scanner(System.in);
-
         Runner.setSearchChoice(scan.next());
-        System.out.println("testing " + Runner.getSearchChoice());
-        Runner.fileOrDirecLogic("/Users/rhy704/Documents/JPractice");
+        Runner.fileOrDirecLogic("/Users/rhy704/");
 
     }
 
