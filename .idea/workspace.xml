@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc3f6a7-926e-4b75-8437-8fa13d903302" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Search/FileSearch.class" afterPath="$PROJECT_DIR$/target/classes/Search/FileSearch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Runner.class" afterPath="$PROJECT_DIR$/target/classes/Runner.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Search/FileSearch.java" afterPath="$PROJECT_DIR$/src/main/java/Search/FileSearch.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Runner.java" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SearchTool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +36,7 @@
       <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.346154" vertical-offset="530" max-vertical-offset="990">
+            <state vertical-scroll-proportion="-29.23077" vertical-offset="65" max-vertical-offset="990">
               <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,8 +52,8 @@
       <file leaf-file-name="FileSearch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Search/FileSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55414015" vertical-offset="234" max-vertical-offset="705">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.477707" vertical-offset="120" max-vertical-offset="705">
+              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -516,12 +519,12 @@
       <created>1474555604916</created>
       <option name="number" value="Default" />
       <updated>1474555604916</updated>
-      <workItem from="1474555609258" duration="12672000" />
+      <workItem from="1474555609258" duration="13368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12672000" />
+    <option name="totallyTimeSpent" value="13368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
@@ -599,7 +602,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.346154" vertical-offset="530" max-vertical-offset="990">
+        <state vertical-scroll-proportion="-29.23077" vertical-offset="65" max-vertical-offset="990">
           <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -613,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Search/FileSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55414015" vertical-offset="234" max-vertical-offset="705">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.477707" vertical-offset="120" max-vertical-offset="705">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding />
         </state>
       </provider>
