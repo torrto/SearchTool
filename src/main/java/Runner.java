@@ -8,34 +8,42 @@ import java.util.Scanner;
  */
 public class Runner {
 
-    private Runner(){}
+    private String searchChoice = "";
+    private FileSearch fileSearch = new FileSearch();
 
-    private static String searchChoice = "";
+    public FileSearch getFileSearch() {
+        return fileSearch;
+    }
 
-    public static String getSearchChoice() {
+    public void setFileSearch(FileSearch fileSearch) {
+        this.fileSearch = fileSearch;
+    }
+
+    public String getSearchChoice() {
         return searchChoice;
     }
 
-    public static void setSearchChoice(String searchChoice) {
+    public void setSearchChoice(String searchChoice, String location) {
         if(searchChoice.equalsIgnoreCase("f") || searchChoice.equalsIgnoreCase("k")) {
-            Runner.searchChoice = searchChoice.toLowerCase();
+            this.searchChoice = searchChoice.toLowerCase();
+            fileOrDirecLogic(location);
         }
         else {
             System.out.println("Please enter an 'F' or a 'K'");
         }
     }
 
-    public static void setFileName(String fileName) {
-        FileSearch.setName(fileName);
+    public void setFileName(String fileName) {
+        fileSearch.setName(fileName);
     }
 
-    public static void fileOrDirecLogic(String location) {
+    public void fileOrDirecLogic(String location) {
         if(searchChoice.equalsIgnoreCase("k")) {
             // do something
         }
         else if(searchChoice.equalsIgnoreCase("f")) {
-            FileSearch.setFile(new File(location));
-            FileSearch.searcher(FileSearch.getFile());
+            fileSearch.setFile(new File(location));
+            fileSearch.searcher(fileSearch.getFile());
 
         }
         else {
@@ -47,13 +55,13 @@ public class Runner {
 
 
     public static void main(String[] args) {
+
         System.out.println("Your keyword to search on");
-        Scanner scanner = new Scanner(System.in);
-        Runner.setFileName(scanner.next());
-        System.out.print("Searching for file name or keyword? (F or K): ");
+        Runner runner = new Runner();
         Scanner scan = new Scanner(System.in);
-        Runner.setSearchChoice(scan.next());
-        Runner.fileOrDirecLogic("/Users/rhy704/");
+        runner.setFileName(scan.next());
+        System.out.print("Searching for file name or keyword? (F or K): ");
+        runner.setSearchChoice(scan.next(), "/Users/rhy704/");
 
     }
 

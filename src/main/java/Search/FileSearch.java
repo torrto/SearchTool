@@ -7,28 +7,29 @@ import java.io.File;
  */
 public class FileSearch {
 
-    private static File file;
-    private static String name;
-    private static boolean found = false;
+    private File file;
+    private String name;
+    private boolean found = false;
 
-    private FileSearch(){}
+    public long startTime;
+    public long endTime;
 
-    public static String getName() { return name; }
+    public String getName() { return name; }
 
-    public static void setName(String name) { FileSearch.name = name; }
+    public void setName(String name) { this.name = name; }
 
-    public static File getFile() { return file; }
+    public File getFile() { return file; }
 
-    public static void setFile(File file) { FileSearch.file = file; }
+    public void setFile(File file) { this.file = file; }
 
-    public static void searcher(File file) {
+    public void searcher(File file) {
             for (File each : file.listFiles()) {
                 if (each.isDirectory()) {
                 System.out.println(each.getName() + " is a directory");
                     searcher(each);
                 } else {
                 System.out.println(each.getName() + " is a file");
-                    if (FileSearch.name.equalsIgnoreCase(each.getName())) {
+                    if (name.equalsIgnoreCase(each.getName())) {
                         System.out.println("FOUND YA: " + each.getAbsolutePath());
                         found = true;
                     }
@@ -37,5 +38,5 @@ public class FileSearch {
                     break;
                 }
             }
-        }
+    }
 }
