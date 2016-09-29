@@ -10,38 +10,16 @@ public class Runner {
 
     private Runner(){}
 
-    private static String searchChoice = "";
-
-    public static String getSearchChoice() {
-        return searchChoice;
-    }
-
-    public static void setSearchChoice(String searchChoice) {
-        if(searchChoice.equalsIgnoreCase("f") || searchChoice.equalsIgnoreCase("k")) {
-            Runner.searchChoice = searchChoice.toLowerCase();
-        }
-        else {
-            System.out.println("Please enter an 'F' or a 'K'");
-        }
-    }
-
     public static void setFileName(String fileName) {
         FileSearch.setName(fileName);
     }
 
     public static void fileOrDirecLogic(String location) {
-        if(searchChoice.equalsIgnoreCase("k")) {
-            // do something
-        }
-        else if(searchChoice.equalsIgnoreCase("f")) {
-            FileSearch.setFile(new File(location));
-            FileSearch.searcher(FileSearch.getFile());
-
-        }
-        else {
-            System.out.println("invalid entry, try again");
-        }
+        FileSearch.setFile(new File(location));
+        FileSearch.searcher(FileSearch.getFile());
     }
+
+
 
 
 
@@ -50,11 +28,13 @@ public class Runner {
         System.out.println("Your keyword to search on");
         Scanner scanner = new Scanner(System.in);
         Runner.setFileName(scanner.next());
-        System.out.print("Searching for file name or keyword? (F or K): ");
-        Scanner scan = new Scanner(System.in);
-        Runner.setSearchChoice(scan.next());
-        Runner.fileOrDirecLogic("/Users/rhy704/");
+        Runner.fileOrDirecLogic("/Users/danielmelton");
 
+        int messagesSize = FileSearch.getMessages().size();
+
+        for(int i = 0; i < messagesSize; i++) {
+            System.out.println(FileSearch.getMessages().get(i));
+        }
     }
 
 }
